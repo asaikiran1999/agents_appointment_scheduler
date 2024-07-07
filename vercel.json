@@ -4,6 +4,8 @@
       "src": "index.py",
       "use": "@vercel/python"
     }
-  ]
+  ],
+  "env": {
+    "PIP_VERBOSE": "1"
+  }
 }
-
