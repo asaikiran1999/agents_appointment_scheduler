@@ -6,8 +6,19 @@ from sklearn.cluster import KMeans
 import pandas as pd
 import numpy as np
 import json as js
-app = Flask("scheduling for agent", static_url_path='', static_folder='static/')
-CORS(app)
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+import pymysql
+
+pymysql.install_as_MySQLdb()
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://username:password@hostname/dbname'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db = SQLAlchemy(app)
+# app = Flask("scheduling for agent", static_url_path='', static_folder='static/')
+# CORS(app)
 
 df4 = None
 def clustering(x,y):
