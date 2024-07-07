@@ -1,5 +1,11 @@
 beautifulsoup4==4.11.1
 bs4==0.0.1
+flask==2.1.0
+pymysql==1.0.2
+pip==23.1.2
+setuptools==65.5.0
+wheel==0.40.0
+
 certifi==2022.5.18.1
 charset-normalizer==2.0.12
 click==8.1.3
