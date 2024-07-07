@@ -1,11 +1,14 @@
 {
   "builds": [
     {
-      "src": "index.py",
+      "src": "app.py",
       "use": "@vercel/python"
     }
   ],
-  "env": {
-    "PIP_VERBOSE": "1"
-  }
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "app.py"
+    }
+  ]
 }
