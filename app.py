@@ -83,16 +83,4 @@ def show_agent_shedule():
     df7 = df7.drop(df7.columns[[10]], axis = 1)
     df7 = js.dumps(df7.to_numpy().tolist())
     return {'success':True,'data':df7}
-
-
-
-
-if __name__ == '__main__':
-    # debug = False
-    debug = True
-    port = 5000
-    #clustering('2022-01-03 00:00:00' , 5)
-    #print(df4.head())
-    #show_agent_shedule()
-    app.run(debug=debug, port=port)
     
